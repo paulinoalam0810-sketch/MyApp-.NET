@@ -1,0 +1,11 @@
+{
+  "solution": {
+    "path": "MyApp.slnx",
+    "projects": [
+      "Application\\Application.csproj",
+      "Data\\Data.csproj",
+      "Domain\\Domain.csproj",
+      "WebApi\\WebApi.csproj"
+    ]
+  }
+}

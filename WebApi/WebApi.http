@@ -1,0 +1,92 @@
+@WebApi_HostAddress = https://localhost:7293
+
+### Get Person By personId
+GET {{WebApi_HostAddress}}/api/persons/3737290e-96f4-478d-819f-d6c14bd4a565
+Accept: application/json
+
+### Create Person
+POST {{WebApi_HostAddress}}/api/persons
+Content-Type: application/json
+
+{
+    "code": "EFM5",
+    "firstName": "Emanuel",
+    "lastName": "Feliz",
+    "email": "emanuel.feliz@example.com",
+    "phoneNumber": "123-456-7890"
+}
+
+### Get All Persons
+GET {{WebApi_HostAddress}}/api/persons
+Accept: application/json
+
+### Update Person By Id
+PUT {{WebApi_HostAddress}}/api/persons/6371c9b3-8bcf-4799-b5b8-c6c8525a58a5
+Content-Type: application/json
+
+{
+    "id": "6371c9b3-8bcf-4799-b5b8-c6c8525a58a5",
+    "code": "007",
+    "firstName": "Emanuel",
+    "lastName": "Feliz Méndez",
+    "email": "felizmendez.emanuel@example.com",
+    "phoneNumber": "123-456-7890"
+}
+
+### Delete Person
+DELETE {{WebApi_HostAddress}}/api/persons/
+
+### Get Person By Code
+GET {{WebApi_HostAddress}}/api/persons/code/SP4
+Accept: application/json
+
+### VISITS ENDPOINTS
+
+### Get All Visits
+GET {{WebApi_HostAddress}}/api/visits
+Accept: application/json
+
+### Register Entry By PersonId
+POST {{WebApi_HostAddress}}/api/visits/entry
+Content-Type: application/json
+
+{
+    "personId": "56f654c0-4d32-462c-9ab4-1897c3c33811",
+    "entryTime": null
+}
+
+### Register Entry By Code
+POST {{WebApi_HostAddress}}/api/visits/entry
+Content-Type: application/json
+
+{
+    "code": "P01",
+    "entryTime": null
+}
+
+### Get All Active Visits
+GET {{WebApi_HostAddress}}/api/visits/active
+Accept: application/json
+
+### Get Visits By PersonId
+GET {{WebApi_HostAddress}}/api/visits/person/56F654C0-4D32-462C-9AB4-1897C3C33811
+Accept: application/json
+
+### Register Exit By PersonId
+POST {{WebApi_HostAddress}}/api/visits/exit
+Content-Type: application/json
+
+{
+    "visitId": "9983a6b0-c46a-4618-a849-d1b92caed3a0",
+    "exitTime": null
+}
+
+### Register Exit By Code
+POST {{WebApi_HostAddress}}/api/visits/exit
+Content-Type: Application/json
+
+{
+    "code": "KR2",
+    "exitTime": null
+}
+
